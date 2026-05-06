@@ -1,4 +1,4 @@
-# Troia Economics landing page
+# Troia Intelligence landing page
 
 Included:
 - index.html
