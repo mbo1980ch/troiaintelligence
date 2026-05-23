@@ -22,13 +22,16 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   width: 100%;
+
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: clamp(24px, 3vw, 40px);
   isolation: isolate;
 }
@@ -36,127 +39,152 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
+
   background:
     linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.32) 0%,
-      rgba(0, 0, 0, 0.40) 36%,
-      rgba(0, 0, 0, 0.56) 100%
+      rgba(0, 0, 0, 0.28) 0%,
+      rgba(0, 0, 0, 0.42) 38%,
+      rgba(0, 0, 0, 0.68) 100%
     );
+
   z-index: -1;
 }
 
 .logo {
   position: absolute;
+
   top: clamp(18px, 2.2vw, 30px);
   left: clamp(18px, 2.2vw, 30px);
-  width: clamp(200px, 22vw, 360px);
+
+  width: clamp(180px, 18vw, 300px);
   height: auto;
+
   object-fit: contain;
 }
 
 .content {
   position: relative;
-  width: min(1080px, 100%);
-  text-align: center;
-  transform: translateY(11vh);
-  padding-inline: 18px;
-}
 
-.eyebrow {
-  font-size: clamp(0.78rem, 1vw, 0.98rem);
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-  opacity: 0.92;
+  width: min(1100px, 100%);
+  padding-inline: 20px;
+
+  text-align: center;
+
+  transform: translateY(10vh);
 }
 
 h1 {
-  font-size: clamp(2.4rem, 6vw, 5.8rem);
-  line-height: 1.03;
-  font-weight: 600;
-  max-width: 14ch;
+  font-size: clamp(2.7rem, 6vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+
+  font-weight: 700;
+  color: #ffffff;
+
+  max-width: 12ch;
   margin: 0 auto;
+
   text-wrap: balance;
 }
 
+.subheadline {
+  margin: 28px auto 0;
+
+  max-width: 760px;
+
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-weight: 400;
+}
+
 .fade-up {
-  animation: fadeUp 1.1s ease-out both;
+  animation: fadeUp 1.15s ease-out both;
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(calc(11vh + 28px));
+    transform: translateY(calc(10vh + 30px));
   }
+
   to {
     opacity: 1;
-    transform: translateY(11vh);
+    transform: translateY(10vh);
   }
 }
 
-@media (max-width: 640px) {
-  .logo {
-    top: 18px;
-    left: 16px;
-    width: clamp(180px, 42vw, 240px);
-  }
-}
-
-  .content {
-    transform: translateY(13vh);
-    padding-inline: 14px;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(calc(13vh + 24px));
-    }
-    to {
-      opacity: 1;
-      transform: translateY(13vh);
-    }
-  }
-
-  h1 {
-    font-size: clamp(2.1rem, 8vw, 4.2rem);
-    max-width: 13ch;
-  }
-}
-
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   body {
     overflow: auto;
   }
 
   .hero {
     align-items: flex-start;
-    padding: 20px 16px 28px;
+    padding: 20px 16px 32px;
     background-position: 58% center;
   }
 
   .logo {
     top: 18px;
     left: 16px;
-    width: clamp(140px, 34vw, 180px);
+    width: clamp(140px, 34vw, 190px);
   }
 
   .content {
     align-self: center;
-    transform: translateY(18vh);
-    padding-inline: 8px;
-    width: 100%;
-  }
 
-  .eyebrow {
-    font-size: 0.78rem;
-    margin-bottom: 10px;
+    width: 100%;
+    padding-inline: 10px;
+
+    transform: translateY(16vh);
   }
 
   h1 {
-    font-size: clamp(1.95rem, 10.2vw, 3.15rem);
-    line-height: 1.08;
+    font-size: clamp(2.1rem, 10vw, 4rem);
+    line-height: 1.04;
+
     max-width: 100%;
+  }
+
+  .subheadline {
+    margin-top: 22px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    max-width: 100%;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(calc(16vh + 22px));
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(16vh);
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .content {
+    transform: translateY(18vh);
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 10vw, 3rem);
+  }
+
+  .subheadline {
+    font-size: 0.95rem;
+    line-height: 1.65;
   }
 
   @keyframes fadeUp {
@@ -164,19 +192,10 @@ h1 {
       opacity: 0;
       transform: translateY(calc(18vh + 20px));
     }
+
     to {
       opacity: 1;
       transform: translateY(18vh);
     }
-  }
-}
-
-@media (max-width: 420px) {
-  .content {
-    transform: translateY(20vh);
-  }
-
-  h1 {
-    font-size: clamp(1.8rem, 10vw, 2.7rem);
   }
 }
