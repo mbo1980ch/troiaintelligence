@@ -66,7 +66,7 @@ body {
 .content {
   position: relative;
 
-  width: min(1100px, 100%);
+  width: min(1400px, 100%);
   padding-inline: 20px;
 
   text-align: center;
@@ -75,29 +75,28 @@ body {
 }
 
 h1 {
-  font-size: clamp(2.7rem, 6vw, 6rem);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
+  font-size: clamp(2.7rem, 5vw, 5.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
 
   font-weight: 700;
   color: #ffffff;
 
-  max-width: 12ch;
-  margin: 0 auto;
+  white-space: nowrap;
 
-  text-wrap: balance;
+  margin: 0 auto;
 }
 
 .subheadline {
-  margin: 28px auto 0;
+  margin: 42px auto 0;
 
-  max-width: 760px;
+  max-width: 860px;
 
-  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  font-size: clamp(1rem, 1.2vw, 1.18rem);
   line-height: 1.8;
   letter-spacing: -0.01em;
 
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.82);
 
   font-weight: 400;
 }
@@ -145,14 +144,14 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(2.1rem, 10vw, 4rem);
-    line-height: 1.04;
+    font-size: clamp(2rem, 8vw, 4rem);
+    line-height: 1.05;
 
-    max-width: 100%;
+    white-space: normal;
   }
 
   .subheadline {
-    margin-top: 22px;
+    margin-top: 30px;
 
     font-size: 1rem;
     line-height: 1.7;
